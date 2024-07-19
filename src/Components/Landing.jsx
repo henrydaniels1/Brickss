@@ -1,7 +1,7 @@
 // import Spline from '@splinetool/react-spline';
 // import Nav from './Nav.jsx';
 import Navbar from './Navbar.jsx'
-import ArchiBg from '../assets/housee.mp4'
+import ArchiBg from '../assets/hou.mp4'
 
 export default function Landing ()
 {
