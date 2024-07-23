@@ -5,7 +5,7 @@ export default function Portfolio() {
   return (
     <div>
       <Navbar/>
-      portfolio
+      Project
     </div>
   )
 }
