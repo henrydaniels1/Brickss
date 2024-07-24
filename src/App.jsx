@@ -9,7 +9,7 @@ import {Foot} from './Components/Foot.jsx';
 
 const App = () => {
   return (
-    <div className="h-full w-full">
+    <div className="h-full w-full space-y-6">
       
       <Router>
       <Routes>

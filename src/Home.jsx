@@ -4,12 +4,12 @@
 import Navbar from "./Components/Navbar";
 import Header from "./Components/Header";
 // import Foot from "./Components/Footer";
-// import Foot from './Components/Footer.jsx'
+// import {Foot} from './Components/Foot.jsx'
 
 const Home = () => {
   return (
    
-    <div className='h-screen w-full'>
+    <div className='h-full w-full space-y-6'>
       {/* <video src={ArchiBg} autoPlay loop muted className='absolute top-0 left-0 w-full h-full object-cover' /> */}
        
       {/* <Landing /> */ }
