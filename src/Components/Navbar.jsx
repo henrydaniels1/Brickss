@@ -9,8 +9,8 @@ const Navbar = () => {
 
   return (
     <div className="w-full ">
-      <div className="container md:w-[95%] w-[97%] mx-auto py-4 flex justify-between items-center z-10 ">
-        <div className="text-black text-lg font-bold z-10">
+      <div className="container md:w-[95%] w-[97%] mx-auto py-4 flex justify-between items-center z-10">
+        <div className="text-black text-lg font-bold z-10  flex items-center">
           {/* Logo */ }
           <a
             href="/"
@@ -45,10 +45,11 @@ const Navbar = () => {
               <div className=" hover:text-blue-500 hover:scale-110 font-bold text-black"> <Link to="/portfolio">Project</Link></div>
               <div className=" hover:text-gray-700 hover:scale-110 font-bold text-[#2947A9] py-2 px-2 rounded-lg"> <Link to="/contact">Contact Us</Link></div>
         </div>
-        <div className="md:hidden z-10">
+
+        <div className="md:hidden z-10 flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-black focus:outline-none z-10"
+            className="text-black focus:outline-none z-10 text-2xl font-extrabold"
           >
             ☰
           </button>
