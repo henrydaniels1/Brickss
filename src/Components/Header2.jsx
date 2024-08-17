@@ -1,9 +1,48 @@
+
+
+import { useEffect, useRef, useState } from 'react';
+
 export const HeaderS = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const currentSectionRef = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.2, // Trigger when 20% of the section is visible
+      }
+    );
+
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
+    }
+
+    return () => {
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
+      }
+    };
+  }, []);
+
   return (
-    <div className=" py-16 mx-auto md:w-[95%] w-[97%]  md:px-0 lg:px-0 lg:py-20 ">
+    <div
+      ref={sectionRef}
+      className="py-16 mx-auto md:w-[95%] w-[97%] md:px-0 lg:px-0 lg:py-20"
+    >
       <div className="grid gap-10 lg:grid-cols-2">
-        <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
-          <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400">
+        <div
+          className={`flex flex-col justify-center transition-all duration-1000 ease-out transform ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12'
+          } md:pr-8 xl:pr-0 lg:max-w-lg`}
+        >
+          <div
+            className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400"
+          >
             <svg className="text-teal-900 w-7 h-7" viewBox="0 0 24 24">
               <polyline
                 fill="none"
@@ -11,7 +50,7 @@ export const HeaderS = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeMiterlimit="10"
-                points=" 8,5 8,1 16,1 16,5"
+                points="8,5 8,1 16,1 16,5"
                 strokeLinejoin="round"
               />
               <polyline
@@ -50,13 +89,13 @@ export const HeaderS = () => {
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               Crafting Spaces That Inspire
               <br className="hidden md:block" />
-             Your Vision, Our Design Expertise{' '}
+              Your Vision, Our Design Expertise{' '}
               <span className="inline-block text-deep-purple-accent-400">
                 Discover Architectural Excellence with Us
               </span>
             </h2>
             <p className="text-base text-gray-700 md:text-lg">
-              From residential to commercial projects, we bring your ideas to life with innovative design solutions. Our team of experienced architects is dedicated to creating functional and aesthetically pleasing spaces that meet your unique needs
+              From residential to commercial projects, we bring your ideas to life with innovative design solutions. Our team of experienced architects is dedicated to creating functional and aesthetically pleasing spaces that meet your unique needs.
             </p>
           </div>
           <div>
@@ -76,22 +115,26 @@ export const HeaderS = () => {
             </a>
           </div>
         </div>
-        <div className="flex items-center justify-center -mx-4 lg:pl-8">
+        <div
+          className={`flex items-center justify-center transition-all duration-1000 ease-out transform ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12'
+          } -mx-4 lg:pl-8`}
+        >
           <div className="flex flex-col items-end px-3">
             <img
-              className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
+              className="object-cover mb-6 rounded shadow-lg h-48 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
               src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
               alt=""
             />
             <img
-              className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
+              className="object-cover w-20 h-35 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
               src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
               alt=""
             />
           </div>
           <div className="px-3">
             <img
-              className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
+              className="object-cover w-40 h-52 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
               src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
               alt=""
             />

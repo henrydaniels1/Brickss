@@ -1,27 +1,3 @@
-// import ArchiBg from '../assets/hou.mp4'
-
-
-// import ArchiBg from '../assets/Hero.png'
-
-
-// export default function Header ()
-// {
-  
-
-  
-
-//   return (
-//      <div className='h-screen  relative overflow-hidden  md:w-[95%] w-[97%] mx-auto'>
-//           {/* <video src={ ArchiBg } autoPlay loop muted className=' absolute top-0 left-0 w-full h-full object-cover' /> */}
-//           <img src={ArchiBg} className=' absolute top-0 left-0 w-full h-full object-cover object-center '/>
-         
-//       <div className="relative z-10 flex items-center justify-center w-full h-full bg-black bg-opacity-30">
-//       <h1 className="text-white lg:text-5xl md:text-[2.8rem] text-[1.3rem] font-bold">Architecture.Design.Visualization</h1>
-//       </div>
-//     </div>
-//   )
-// }
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -38,7 +14,6 @@ const images = [
   Image3,
   Image4,
   Image5,
-  
 ];
 
 export default function Header() {
@@ -47,7 +22,7 @@ export default function Header() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000); // Change image every 3 seconds
+    }, 4000); // Change image every 4 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -62,10 +37,14 @@ export default function Header() {
           className={`absolute w-full h-full object-fill transition-opacity duration-2000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}
           initial={{ opacity: 0 }}
           animate={{ opacity: index === currentIndex ? 1 : 0 }}
-          transition={{ duration: 1 }}
+          transition={ { duration: 1 } }
         />
       ))}
+      
+      {/* Add the text overlay */}
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <h1 className="text-white lg:text-5xl md:text-[2.8rem] text-[1.7rem] lg:tracking-[1rem] md:tracking-[0.7rem] tracking-[0.35rem] font-bold">Architecture at its best</h1>
+      </div>
     </div>
   );
 }
-
