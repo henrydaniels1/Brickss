@@ -1,6 +1,9 @@
 
 
 import { useEffect, useRef, useState } from 'react';
+import Pic1 from '../assets/p1.jpeg'
+import Pic2 from '../assets/p2.jpeg'
+import Pic3 from '../assets/p3.jpeg'
 
 export const HeaderS = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -117,25 +120,24 @@ export const HeaderS = () => {
         </div>
         <div
           className={`flex items-center justify-center transition-all duration-1000 ease-out transform ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12'
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-x-12'
           } -mx-4 lg:pl-8`}
         >
           <div className="flex flex-col items-end px-3">
             <img
               className="object-cover mb-6 rounded shadow-lg h-48 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-              src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+              src={Pic1}
               alt=""
             />
             <img
               className="object-cover w-20 h-35 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-              src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-              alt=""
+              src={Pic2}
             />
           </div>
           <div className="px-3">
             <img
               className="object-cover w-40 h-52 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-              src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+              src={Pic3}
               alt=""
             />
           </div>
