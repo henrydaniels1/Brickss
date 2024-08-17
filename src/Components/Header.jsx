@@ -43,7 +43,7 @@ export default function Header() {
       
       {/* Add the text overlay */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
-        <h1 className="text-white lg:text-5xl md:text-[2.8rem] text-[1.7rem] lg:tracking-[1rem] md:tracking-[0.7rem] tracking-[0.35rem] font-bold">Architecture at its best</h1>
+        <h1 className="text-white lg:text-5xl md:text-[2.8rem] text-[1.7rem] lg:tracking-[1rem] md:tracking-[0.7rem] tracking-[0.3rem] font-bold">Architecture at it&apos;s best</h1>
       </div>
     </div>
   );
