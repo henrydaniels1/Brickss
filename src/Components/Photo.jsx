@@ -5,6 +5,7 @@ import {
   Tab,
   TabPanel,
 } from "@material-tailwind/react";
+
  
 export function Photo() {
   const data = [
@@ -167,70 +168,70 @@ export function Photo() {
   ];
  
   return (
-  //  <Tabs value="html" className=' space-y-6'>
+   <Tabs value="html" className=' space-y-6'>
      
-  //     <TabsBody className="grid grid-cols-1 gap-4 md:w-[95%] w-[97%] mx-auto bg-red-200">
-  //       {data.map(({ value, images }) => (
-  //         <TabPanel
-  //           className="grid grid-cols-2 gap-4 md:grid-cols-3 "
-  //           key={value}
-  //           value={value}
-  //         >
-  //           {images?.map(({ imageLink }, index) => (
-  //             <div key={index} className="relative group">
-  //               <img
-  //                 className="lg:h-80 md:h-[15rem] h-[11rem] w-full rounded-lg  object-cover object-center"
-  //                 src={imageLink}
-  //                 alt={`Image ${index}`}
-  //               />
-  //               <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 
-  //               transition-opacity duration-300 ease-in-out rounded-lg"></div>
-  //             </div>
-  //           ))}
-  //         </TabPanel>
-  //       ))}
-  //     </TabsBody>
-
-  //      <TabsHeader className="md:w-[95%] w-[97%] mx-auto">
-  //       {data.map(({ label, value }) => (
-  //         <Tab key={value} value={value}>
-  //           {label}
-  //         </Tab>
-  //       ))}
-  //     </TabsHeader>
-  //   </Tabs>
-  
-  
-  <Tabs value="html" className='space-y-6'>
-  <TabsBody className="grid grid-cols-1 gap-4 w-full mx-0">
-    {data.map(({ value, images }) => (
-      <TabPanel
-        className="grid grid-cols-2 gap-4 md:grid-cols-3 w-full mx-0"
-        key={value}
-        value={value}
-      >
-        {images?.map(({ imageLink }, index) => (
-          <div key={index} className="relative group">
-            <img
-              className="lg:h-80 md:h-[15rem] h-[11rem] w-full rounded-lg object-cover object-center"
-              src={imageLink}
-              alt={`Image ${index}`}
-            />
-            <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300 ease-in-out rounded-lg"></div>
-          </div>
+      <TabsBody className="grid grid-cols-1 gap-4 md:w-[95%] w-[97%] mx-auto bg-gray-100">
+        {data.map(({ value, images }) => (
+          <TabPanel
+            className="grid grid-cols-2 gap-4 md:grid-cols-3 "
+            key={value}
+            value={value}
+          >
+            {images?.map(({ imageLink }, index) => (
+              <div key={index} className="relative group">
+                <img
+                  className="lg:h-80 md:h-[15rem] h-[11rem] w-full rounded-lg  object-cover object-center"
+                  src={imageLink}
+                  alt={`Image ${index}`}
+                />
+                <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 
+                transition-opacity duration-300 ease-in-out rounded-lg"></div>
+              </div>
+            ))}
+          </TabPanel>
         ))}
-      </TabPanel>
-    ))}
-  </TabsBody>
+      </TabsBody>
 
-  <TabsHeader className="md:w-[95%] w-[97%] mx-auto">
-    {data.map(({ label, value }) => (
-      <Tab key={value} value={value}>
-        {label}
-      </Tab>
-    ))}
-  </TabsHeader>
-</Tabs>
+       <TabsHeader className="md:w-[95%] w-[97%] mx-auto bg-gray-100 rounded-lg">
+        {data.map(({ label, value }) => (
+          <Tab key={value} value={value}>
+            {label}
+          </Tab>
+        ))}
+      </TabsHeader>
+    </Tabs>
+  
+  
+//   <Tabs value="html" className='space-y-6'>
+//   <TabsBody className="grid grid-cols-1 gap-4 w-full mx-0">
+//     {data.map(({ value, images }) => (
+//       <TabPanel
+//         className="grid grid-cols-2 gap-4 md:grid-cols-3 w-full mx-0"
+//         key={value}
+//         value={value}
+//       >
+//         {images?.map(({ imageLink }, index) => (
+//           <div key={index} className="relative group">
+//             <img
+//               className="lg:h-80 md:h-[15rem] h-[11rem] w-full rounded-lg object-cover object-center"
+//               src={imageLink}
+//               alt={`Image ${index}`}
+//             />
+//             <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-0 transition-opacity duration-300 ease-in-out rounded-lg"></div>
+//           </div>
+//         ))}
+//       </TabPanel>
+//     ))}
+//   </TabsBody>
+
+//   <TabsHeader className="md:w-[95%] w-[97%] mx-auto">
+//     {data.map(({ label, value }) => (
+//       <Tab key={value} value={value}>
+//         {label}
+//       </Tab>
+//     ))}
+//   </TabsHeader>
+// </Tabs>
 
   );
 }

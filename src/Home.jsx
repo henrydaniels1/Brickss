@@ -3,6 +3,9 @@
 // import ArchiBg from './assets/archi.mp4'
 import Navbar from "./Components/Navbar";
 import Header from "./Components/Header";
+import {HeaderS} from "./Components/Header2";
+import {Content1} from "./Components/Header3";
+// import ThreeDCardDemo from './Components/Card.jsx'
 // import Foot from "./Components/Footer";
 // import {Foot} from './Components/Foot.jsx'
 
@@ -15,6 +18,9 @@ const Home = () => {
       {/* <Landing /> */ }
       <Navbar />
       <Header />
+      <HeaderS />
+      <Content1 />
+      {/* <ThreeDCardDemo/> */}
      {/* <Foot /> */}
       
       

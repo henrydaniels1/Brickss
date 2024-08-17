@@ -1,49 +1,42 @@
+
+
 // src/components/Navbar.js
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
+import Logo from '../assets/Logo2.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full ">
-      <div className="container md:w-[95%] w-[97%] mx-auto py-4 flex justify-between items-center z-10">
-        <div className="text-black text-lg font-bold z-10  flex items-center">
-          {/* Logo */ }
-          <a
-            href="/"
-            aria-label="Go home"
-            title="Company"
-            className="inline-flex items-center"
-          >
-            <svg
-              className="w-8 text-[#2947A9]"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12" />
-              <rect x="3" y="17" width="7" height="6" />
-              <rect x="14" y="1" width="7" height="6" />
-              <rect x="14" y="11" width="7" height="12" />
-            </svg>
-            <span className="ml-1 text-xl font-extrabold tracking-wide text-[#ecef39] uppercase">
-              BRICKS&STEELS
-            </span>
-          </a>
+    <div className="w-full h-full">
+      <div className="container md:w-[95%] w-[97%] px-0 h-full mx-auto flex justify-between items-center z-10">
+        <div className="text-black text-lg h-full py-0 font-bold z-10 flex items-center">
+          {/* Logo */}
+          <div className="w-20 h-20 py-0">
+            <img src={Logo} alt="Logo" className="w-full h-full object-fill" />
+          </div>
         </div>
-        <div className="hidden md:flex space-x-12 z-10 items-center">
-         
-              <div className=" hover:text-gray-700 hover:scale-110 font-bold text-black"> <Link to="/">Home</Link></div>
-              <div className=" hover:text-gray-700 hover:scale-110 font-bold text-black"><Link to="/gallery">Gallery</Link></div>
-              <div className=" hover:text-blue-500 hover:scale-110 font-bold text-black"> <Link to="/portfolio">Project</Link></div>
-              <div className=" hover:text-gray-700 hover:scale-110 font-bold text-[#2947A9] py-2 px-2 rounded-lg"> <Link to="/contact">Contact Us</Link></div>
+        <div className="hidden md:flex space-x-12 z-10 items-center py-4">
+          {["/", "/gallery", "/portfolio", "/contact"].map((path, index) => {
+            const labels = ["Home", "Gallery", "Project", "Contact Us"];
+            return (
+              <motion.div
+                key={path}
+                whileHover={{ scale: 1.1, color: "#4A4A4A", borderBottom: ".5px solid #007BFF" }}
+                transition={{ duration: 0.3 }}
+                className={`font-bold text-black relative pb-1 cursor-pointer`}
+              >
+                <Link to={path} className="z-10">{labels[index]}</Link>
+                <motion.div
+                  className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 origin-bottom scale-x-0"
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.div>
+            );
+          })}
         </div>
 
         <div className="md:hidden z-10 flex items-center">
@@ -61,11 +54,24 @@ const Navbar = () => {
           animate={{ height: 'auto' }}
           className="md:hidden flex flex-col space-y-2 mt-4 z-10 items-center"
         >
-
-              <div className=" hover:text-gray-700 hover:scale-110 font-bold text-black z-10"> <Link to="/">Home</Link></div>
-              <div className=" hover:text-gray-700 hover:scale-110 font-bold text-black z-10"><Link to="/gallery">Gallery</Link></div>
-              <div className=" hover:text-blue-500 hover:scale-110 font-bold text-black z-10"> <Link to="/portfolio">Project</Link></div>
-              <div className=" hover:text-gray-700 hover:scale-110 font-bold text-black z-10"> <Link to="/contact">Contact</Link></div>
+          {["/", "/gallery", "/portfolio", "/contact"].map((path, index) => {
+            const labels = ["Home", "Gallery", "Project", "Contact"];
+            return (
+              <motion.div
+                key={path}
+                whileHover={{ scale: 1.1, color: "#4A4A4A", borderBottom: "2px solid #007BFF" }}
+                transition={{ duration: 0.3 }}
+                className={`font-bold text-black relative pb-2 cursor-pointer`}
+              >
+                <Link to={path} className="z-10">{labels[index]}</Link>
+                <motion.div
+                  className="absolute bottom-0 left-0 w-full h-1 bg-blue-500 origin-bottom scale-x-0"
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </motion.div>
+            );
+          })}
         </motion.div>
       )}
     </div>
