@@ -53,7 +53,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="relative md:w-[95%] w-[97%] h-[40rem] mx-auto md:h-screen overflow-hidden">
+    <div className="relative md:w-[95%] w-full h-[38rem] mx-auto md:h-screen overflow-hidden">
       {images.map((src, index) => (
         <motion.img
           key={index}
