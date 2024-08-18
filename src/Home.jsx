@@ -4,7 +4,9 @@
 import Navbar from "./Components/Navbar";
 import Header from "./Components/Header";
 import {HeaderS} from "./Components/Header2";
-import {Content1} from "./Components/Header3";
+import { Content1 } from "./Components/Header3";
+import { Rep } from "./Components/Reputation"
+import { Team } from "./Components/Team";
 // import ThreeDCardDemo from './Components/Card.jsx'
 // import Foot from "./Components/Footer";
 // import {Foot} from './Components/Foot.jsx'
@@ -17,9 +19,11 @@ const Home = () => {
        
       {/* <Landing /> */ }
       <Navbar />
-      <Header />
+      <Header /> <Rep/>
       <HeaderS />
       <Content1 />
+      <Team/>
+     
       {/* <ThreeDCardDemo/> */}
      {/* <Foot /> */}
       

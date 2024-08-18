@@ -5,33 +5,10 @@ export const Foot = () =>
 {
   return (
     <div className="md:w-[95%] w-[97%]  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen ">
-      <div className=" grid gap-14 row-gap-6 mb-8   sm:grid-cols-2 lg:grid-cols-4">
-        <div className="sm:col-span-2 ">
-          {/* <a
-            href="/"
-            aria-label="Go home"
-            title="Company"
-            className="inline-flex items-center"
-          >
-            <svg
-              className="w-8 text-[#2947A9]"
-              viewBox="0 0 24 24"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeMiterlimit="10"
-              stroke="currentColor"
-              fill="none"
-            >
-              <rect x="3" y="1" width="7" height="12" />
-              <rect x="3" y="17" width="7" height="6" />
-              <rect x="14" y="1" width="7" height="6" />
-              <rect x="14" y="11" width="7" height="12" />
-            </svg>
-            <span className="ml-2 text-xl font-extrabold tracking-wide text-[#ecef39] uppercase">
-              BRICKS&STEELS
-            </span>
-          </a> */}
+      <div className=" grid gap-14 sm:row-gap-6 mb-8   sm:grid-cols-2 lg:grid-cols-3 ">
+
+        <div className="sm:col-span-2 lg:col-span-1 ">
+         
           <div className=" w-20 h-20 py-0"><img src={Logo} className='w-full h-full object-fill'/></div>
           <div className="mt-4 lg:max-w-sm">
             <p className="text-sm font-bold text-black">
@@ -42,6 +19,7 @@ export const Foot = () =>
             </p>
           </div>
         </div>
+
         <div className="space-y-2 text-sm">
           <p className="text-base font-extrabold  tracking-wide text-[#2947A9]">
             Contacts
@@ -84,7 +62,8 @@ export const Foot = () =>
             </a>
           </div>
         </div>
-        <div>
+
+        <div className=" flex flex-col md:ml-auto">
           <span className="text-base font-extrabold tracking-wide text-[#2947A9]">
             Social
           </span>
@@ -123,6 +102,7 @@ export const Foot = () =>
            Let&apos;s Discuss Your Project
           </p>
         </div>
+
       </div>
 
       

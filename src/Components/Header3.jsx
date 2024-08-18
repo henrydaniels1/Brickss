@@ -5,7 +5,8 @@ import Image2 from '../assets/b1.jpg';
 import Image3 from '../assets/b2.jpg'; 
 import Image4 from '../assets/b3.jpg'; 
 import Image5 from '../assets/b4.jpg'; 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import ViewAll from './ViewAll.jsx'
 
 export const Content1 = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +36,15 @@ export const Content1 = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:w-[95%] w-[97%] lg:py-20">
+      <div ref={ sectionRef } className="py-16 pt-0 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:w-[95%] w-[97%] ">
+           {/* Section Title with a transition effect based on visibility */}
+      <div
+        className={`flex items-center justify-center mb-16 font-bold transition-all duration-1000 ease-out transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-12'
+        }`}
+      >
+        <p className="lg:text-4xl md:text-3xl text-2xl">Our Projects</p>
+      </div>
       <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
         
         {[Image2, Image3, Image4, Image5].map((image, index) => (
@@ -70,7 +79,7 @@ export const Content1 = () => {
       </div>
       
       <div className="text-center">
-        <Link to='./portfolio' className='inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'>
+        {/* <Link to='./portfolio' className='inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'>
           View Project
           <svg
             className="inline-block w-3 ml-2"
@@ -79,7 +88,8 @@ export const Content1 = () => {
           >
             <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
           </svg>
-        </Link>
+        </Link> */}
+              <ViewAll/>
       </div>
     </div>
   );

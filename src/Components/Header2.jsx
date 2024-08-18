@@ -35,7 +35,7 @@ export const HeaderS = () => {
   return (
     <div
       ref={sectionRef}
-      className="py-16 mx-auto md:w-[95%] w-[97%] md:px-0 lg:px-0 lg:py-20"
+      className="py-16 pt-0 mx-auto md:w-[95%] w-[97%] md:px-0 lg:px-0"
     >
       <div className="grid gap-10 lg:grid-cols-2">
         <div
@@ -44,7 +44,7 @@ export const HeaderS = () => {
           } md:pr-8 xl:pr-0 lg:max-w-lg`}
         >
           <div
-            className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-teal-accent-400"
+            className="flex items-center space-x-4 mb-4 rounded-full bg-teal-accent-400"
           >
             <svg className="text-teal-900 w-7 h-7" viewBox="0 0 24 24">
               <polyline
@@ -86,19 +86,25 @@ export const HeaderS = () => {
                 height="4"
                 strokeLinejoin="round"
               />
-            </svg>
+                      </svg>
+                     <p className='font-semibold tracking-wider text-teal-900 lg:text-4xl md:text-3xl text-2xl'>About Us</p>
           </div>
           <div className="max-w-xl mb-6">
-            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            {/* <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               Crafting Spaces That Inspire
               <br className="hidden md:block" />
               Your Vision, Our Design Expertise{' '}
               <span className="inline-block text-deep-purple-accent-400">
                 Discover Architectural Excellence with Us
               </span>
-            </h2>
+            </h2> */}
             <p className="text-base text-gray-700 md:text-lg">
-              From residential to commercial projects, we bring your ideas to life with innovative design solutions. Our team of experienced architects is dedicated to creating functional and aesthetically pleasing spaces that meet your unique needs.
+             Bricks and Steels Construction Firm is a leading construction company
+dedicated to providing high-quality building solutions. With a commitment to
+excellence and innovation, we have been shaping skylines and constructing
+dreams since our inception. Our expertise spans residential, commercial, and
+industrial projects, ensuring that we meet the diverse needs of our clients
+with precision and professionalism.
             </p>
           </div>
           <div>
