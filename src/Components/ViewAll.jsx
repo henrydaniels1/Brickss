@@ -5,7 +5,7 @@ export default function ViewAll() {
   return (
       <>
           <div className='flex items-center justify-center'>
-              <Link to='./portfolio' className='inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'>
+              <Link to='./portfolio' className='inline-flex text-gray-500 items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800'>
           View Project
           <svg
             className="inline-block w-3 ml-2"
