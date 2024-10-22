@@ -18,7 +18,7 @@ const Home = () => {
     <div >
       {/* <video src={ArchiBg} autoPlay loop muted className='absolute top-0 left-0 w-full h-full object-cover' /> */}
        <ExampleComponent/>
-      <div className='h-full w-full space-y-6'>
+      <div className='h-full w-full space-y-6 overflow-hidden'>
       {/* <Landing /> */ }
       <Navbar />
       <Header /> <Rep/>

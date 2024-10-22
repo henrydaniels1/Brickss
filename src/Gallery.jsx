@@ -3,7 +3,7 @@ import Navbar from "./Components/Navbar.jsx";
 
 const Gallery = () => {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 overflow-hidden">
       <Navbar />
       <div className="md:w-[95%] w-[93%] mx-auto lg:text-4xl md:text-3xl text-2xl font-bold ">
         <span className="text-[#2947A9]">Photo</span><br/>

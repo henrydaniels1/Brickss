@@ -4,7 +4,7 @@ import {Content1} from "./Components/Project2.jsx";
 
 export default function Portfolio() {
   return (
-    <div className="w-full space-y-6" >
+    <div className="w-full space-y-6 overflow-hidden" >
       <Navbar/>
       <div className="">
        <Content1/>
